@@ -1,0 +1,18 @@
+# generate schema for testing data
+# first node: table name
+# second node: row name
+customers:
+  - row: firstName
+    type: firstname
+  - row: lastName
+    type: lastname
+  - row: fullName
+    type: fullname
+  - row: streetName
+    type: street
+  - row: postCode
+    type: postcode[5]
+  - row: country
+    type: country
+  - row: ipAddress
+    type: ipv4
