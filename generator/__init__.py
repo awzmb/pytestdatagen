@@ -3,15 +3,17 @@ from faker import Faker
 
 def read_yaml(file_location):
     with open(file_location, 'r') as stream:
-        parsed_yaml=yaml.safe_load(stream)
-        print(parsed_yaml)
-        return parsed_yaml
+        return yaml.safe_load(stream)
 
 
 def main():
     fake = Faker()
-    print(fake.address())
-    read_yaml("./test.yaml")
+    new_yaml = read_yaml("./definition.yaml")
+
+    customer = []
+
+    for table in new_yaml.keys():
+        print(new_yaml[table][0]['type'])
 
 
 if __name__ == "__main__":
